@@ -18,3 +18,7 @@ mvn spring-boot:run
 - `GET /api/courses`
 - `POST /api/courses`
 - `DELETE /api/courses/{id}`
+
+- `GET /api/teachers`
+- `POST /api/teachers`
+- `DELETE /api/teachers/{id}`
