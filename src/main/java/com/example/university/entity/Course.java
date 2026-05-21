@@ -1,9 +1,8 @@
 package com.example.university.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import java.util.List;
+import jakarta.validation.constraints.*;
 
 @Entity
 public class Course {
@@ -12,13 +11,28 @@ public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     
+    
+    
+    
     private Long id;
 
+    
+    
+    @NotNull
+    
+    
     
     private String title;
 
     
+    
+    
+    
     private Integer credits;
+
+
+
+
 
 
 
@@ -45,5 +59,7 @@ public class Course {
     public void setCredits(Integer credits) {
         this.credits = credits;
     }
+
+
 
 }

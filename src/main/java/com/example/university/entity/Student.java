@@ -1,9 +1,8 @@
 package com.example.university.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import java.util.List;
+import jakarta.validation.constraints.*;
 
 @Entity
 public class Student {
@@ -12,13 +11,34 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     
+    
+    
+    
     private Long id;
 
+    
+    
+    @NotNull
+    
+    
+    
+    @Size(min = 2, max = 50)
     
     private String name;
 
     
+    
+    @NotNull
+    
+    
+    @Email
+    
+    
     private String email;
+
+
+
+
 
 
 
@@ -45,5 +65,7 @@ public class Student {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
 
 }

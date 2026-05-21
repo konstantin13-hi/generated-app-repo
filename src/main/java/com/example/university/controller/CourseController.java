@@ -3,6 +3,8 @@ package com.example.university.controller;
 import com.example.university.entity.Course;
 import com.example.university.service.CourseService;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
+
 
 import java.util.List;
 
@@ -15,18 +17,16 @@ public class CourseController {
         this.service = service;
     }
 
+
     @GetMapping
     public List<Course> findAll() {
         return service.findAll();
     }
 
-    @PostMapping
-    public Course create(@RequestBody Course item) {
-        return service.save(item);
-    }
 
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
-        service.delete(id);
-    }
+
+
+
+
+
 }

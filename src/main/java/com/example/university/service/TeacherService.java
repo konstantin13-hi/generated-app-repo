@@ -22,6 +22,11 @@ public class TeacherService {
         return repository.save(item);
     }
 
+    public Teacher update(Long id, Teacher item) {
+        item.setId(id);
+        return repository.save(item);
+    }
+
     public void delete(Long id) {
         repository.deleteById(id);
     }
